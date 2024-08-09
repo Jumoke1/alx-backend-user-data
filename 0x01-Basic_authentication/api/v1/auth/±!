@@ -10,12 +10,12 @@ class Auth:
         Determines if the given path requires authentication.
         Currently returns False for all paths.
         """
-        if path is None:
+        if path is None :
             return True
 
         if excluded_paths is None or len(exclude_paths) == 0:
             return True
-
+        
         path = path.rstrip('/') + '/'
 
         if path in excluded_path:
