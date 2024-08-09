@@ -1,17 +1,27 @@
-#!/usr/bin/env python3
+# api/v1/auth/auth.py
+
 from flask import request
-from typing import list, TypeVar
+from typing import List, TypeVar
 
 
 class Auth:
-    def __init__(self)
-    return self
-
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
-        return false
+        """
+        Determines if the given path requires authentication.
+        Currently returns False for all paths.
+        """
+        return False
 
     def authorization_header(self, request=None) -> str:
+        """
+        Returns the value of the Authorization header if present.
+        Currently returns None.
+        """
         return None
 
     def current_user(self, request=None) -> TypeVar('User'):
+        """
+        Returns the current user based on the request.
+        Currently returns None.
+        """
         return None
