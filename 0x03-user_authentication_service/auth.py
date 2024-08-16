@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """A module for authentication-related routines"""
 import bcrypt
+from uuid import uuuid4
+from typing import Union
 from db import DB
 from sqlalchemy.orm.exc import NoResultFound
 from user import User
